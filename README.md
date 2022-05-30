@@ -1,0 +1,1 @@
+This repo contains various assignments in higher level python programming in the ALX Holberton School.
