@@ -1,10 +1,14 @@
+#!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    count = 0
-    for i in range(0, x):
-        try:
-            print("{:d}".format(my_list[i]), end="")
-            count += 1
-        except TypeError:
-            pass
-    print()
-    return count
+    idx = 0
+
+    try:
+        for i in my_list:
+            if idx < x:
+                print('{}'.format(my_list[idx]), end='')
+                idx += 1
+        print()
+    except TypeError:
+        pass
+    finally:
+        return idx
